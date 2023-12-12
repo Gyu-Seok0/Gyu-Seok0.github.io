@@ -18,9 +18,9 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-Hello! I'm a master's student at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>. My research goal is to develop practical Recommender System by applying Knowledge Distillation, Continual Learning, and a Diffusion Model.I have gained comprehensive experiences in other domains such as Computer Vision, Natural Language Processing, and Reinforcement Learning. I'm open to collaboration, so please feel free to contact me.
+Hello! I'm a master's student at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>. My research goal is to develop practical Recommender System by applying Knowledge Distillation, Continual Learning, and a Diffusion Model.I have gained comprehensive experiences in other domains such as Computer Vision, Natural Language Processing, and Reinforcement Learning. I'm open to collaboration, so please feel free to contact me <u>(kbin6961@gmail.com)</u>.
 
-Here is my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
+For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
 
 
 
