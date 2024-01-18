@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
+subtitle: <b> M.S. Student,</b> <a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
 
 profile:
   align: right
