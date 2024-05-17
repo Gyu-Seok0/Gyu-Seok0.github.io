@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <b> M.S. Student,</b> <a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
+subtitle: <b> AI Research Scientist at </b> <a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -18,7 +18,15 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-Hello! I'm a master's student at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>. My research goal is to develop practical Recommender System by applying Knowledge Distillation, Continual Learning, and a Diffusion Model.I have gained comprehensive experiences in other domains such as Computer Vision, Natural Language Processing, and Reinforcement Learning. I'm open to collaboration, so please feel free to contact me <u>(kbin6961@gmail.com)</u>.
+<!-- Hello! I am an AI Research Scientist at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>.  -->
+
+My goal is to bring about newness in the world through AI. 
+
+Concretely, I aim to help people make their daily decisions through practical <b>Recommender Systems</b>.
+
+My research interests include <b> Knowledge Distillation, Continual Learning, and Generative Models such as LLM and Diffusion Models. </b>
+
+I'm open to collaboration, so please feel free to contact me <u>(kbin6961@gmail.com)</u>.
 
 For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
 
