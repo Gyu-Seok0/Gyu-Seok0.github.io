@@ -29,7 +29,7 @@ I completed my B.S. degree with a dual major in Computer Science and Mathematics
 
 My research interests lie in Information Retreiveal, Recommender Systems, Continual Learning, Knowledge Distillation, and Generative Methods (e.g., LLMs and Diffusion Models).
 
-For your reference, I attached my <a href="/assets/pdf/CV.pdf">CV</a>.
+For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
 
 
 
