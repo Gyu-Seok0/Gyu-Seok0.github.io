@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: <b> AI Research Scientist at </b> <a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
+subtitle: I am a researcher in the Department of Computer Science and Engineering at Pohang University of Science and Technology (POSTECH).
+
+#<a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, #Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -20,15 +22,14 @@ social: false  # includes social icons at the bottom of the page
 ---
 <!-- Hello! I am an AI Research Scientist at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>.  -->
 
-My goal is to bring about newness in the world through AI. 
 
-Concretely, I aim to help people make their daily decisions through practical <b>Recommender Systems</b>.
+I earned my M.S. degree in Artifical Intelligence at POSTECH under the guidance of <a href='https://sites.google.com/view/postechdi/home'> Prof. Hwanjo Yu </a>.
 
-My research interests include <b> Knowledge Distillation, Continual Learning, and Generative Models such as LLM and Diffusion Models. </b>
+I completed my B.S. degree with a dual major in Computer Science and Mathematics/Statistics, graduating magna cum laude from Handong Global University.
 
-I'm open to collaboration, so please feel free to contact me <u>(kbin6961@gmail.com)</u>.
+My research interests lie in Information Retreiveal, Recommender Systems, Continual Learning, Knowledge Distillation, and Generative Methods (e.g., LLMs and Diffusion Models).
 
-For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
+For your reference, I attached my <a href="/assets/pdf/CV.pdf">CV</a>.
 
 
 

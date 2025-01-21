@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I'm working as a visiting researcher under the guidance of Prof.<a href="https://jundongli.github.io/"> Jundong Li </a> at the University of Virginia (UVA).
+I'm working as a visiting researcher under the guidance of <a href="https://jundongli.github.io/"> Prof. Jundong Li </a> at the University of Virginia.
 
