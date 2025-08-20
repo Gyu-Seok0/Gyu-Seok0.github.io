@@ -2,13 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: I am a researcher in the Department of Computer Science and Engineering at Pohang University of Science and Technology (POSTECH).
+subtitle: I am a Ph.D. student at the School of Information Sciences, University of Illinois Urbana-Champaign (UIUC), advised by <a href='https://www.wangdong.org/sslab/'> Prof. Dong Wang</a>.
 
 #<a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, #Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: Gyuseok.JPG
+  image: passport.JPG
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
@@ -23,11 +23,9 @@ social: false  # includes social icons at the bottom of the page
 <!-- Hello! I am an AI Research Scientist at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>.  -->
 
 
-I earned my M.S. degree in Artifical Intelligence at POSTECH under the guidance of <a href='https://sites.google.com/view/postechdi/home'> Prof. Hwanjo Yu </a>.
+My goal is to pursue research with real-world impact.
 
-I completed my B.S. degree with a dual major in Computer Science and Mathematics/Statistics, graduating magna cum laude from Handong Global University.
-
-My research interests lie in Information Retreiveal, Recommender Systems, Continual Learning, Knowledge Distillation, and Generative Methods (e.g., LLMs and Diffusion Models).
+My research interests include Information Retrieval and Recommender Systems, with a focus on using LLMs to support decision-making.
 
 For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
 
