@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I will be joining the Ph.D. program in Information Sciences at the University of Illinois Urbana-Champaign this fall.
+I am pursuing a Ph.D. in Information Sciences at UIUC.

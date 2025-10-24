@@ -2,3 +2,191 @@
           <div class="publications">
             {% bibliography -f {{ site.scholar.bibliography }} --group_by none --query @*[selected=true]* %}
           </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              console.log('Script loaded, processing publications...');
+              
+              // 1. Add underline and bold to Gyuseok Lee only
+              const authorElements = document.querySelectorAll('.author');
+              console.log('Found author elements:', authorElements.length);
+              
+              authorElements.forEach(function(element) {
+                // Replace Gyuseok Lee with styled version (with or without *)
+                const originalHTML = element.innerHTML;
+                const updatedHTML = originalHTML.replace(/Gyuseok Lee\*?/g, '<strong style="text-decoration: underline;">Gyuseok Lee</strong>');
+                element.innerHTML = updatedHTML;
+              });
+
+              // 2. Remove "In conference name" lines completely - more aggressive approach
+              const publicationItems = document.querySelectorAll('.publications li');
+              publicationItems.forEach(function(item) {
+                // Remove all text nodes that start with "In "
+                const walker = document.createTreeWalker(
+                  item,
+                  NodeFilter.SHOW_TEXT,
+                  null,
+                  false
+                );
+                
+                const textNodesToRemove = [];
+                let node;
+                while (node = walker.nextNode()) {
+                  const text = node.textContent.trim();
+                  if (text.startsWith('In ') || 
+                      text.match(/^,\s*\d{4}$/) || 
+                      text.match(/^\d{4}$/) ||
+                      text.includes('Proceedings') ||
+                      text.includes('Conference')) {
+                    textNodesToRemove.push(node);
+                  }
+                }
+                
+                textNodesToRemove.forEach(textNode => {
+                  console.log('Removing text node:', textNode.textContent);
+                  textNode.remove();
+                });
+                
+                // Also remove any remaining conference info elements
+                const conferenceElements = item.querySelectorAll('*');
+                conferenceElements.forEach(function(el) {
+                  if (el.textContent && el.textContent.includes('In ') && el.textContent.includes(',')) {
+                    console.log('Removing conference element:', el.textContent);
+                    el.remove();
+                  }
+                });
+              });
+
+              // 3. Add paper images and links to titles
+              const bibliographyItems = document.querySelectorAll('.publications li');
+              console.log('Found bibliography items:', bibliographyItems.length);
+              
+              bibliographyItems.forEach(function(item) {
+                const abbrElement = item.querySelector('.abbr abbr');
+                if (abbrElement) {
+                  const titleElement = item.querySelector('.title');
+                  if (titleElement) {
+                    const title = titleElement.textContent.trim();
+                    console.log('Processing title:', title);
+                    
+                    // Map titles to URLs (using the URLs from papers.bib)
+                    let paperUrl = '';
+                    if (title.includes('Capturing User Interests from Data Streams')) {
+                      paperUrl = 'https://arxiv.org/abs/2506.07466';
+                    } else if (title.includes('Collaborative Diffusion Model')) {
+                      paperUrl = 'https://dl.acm.org/doi/abs/10.1145/3701716.3715516';
+                    } else if (title.includes('Continual Collaborative Distillation')) {
+                      paperUrl = 'https://dl.acm.org/doi/abs/10.1145/3637528.3671924';
+                    } else if (title.includes('Calibrating Deep Learning Model')) {
+                      paperUrl = 'https://arxiv.org/abs/2501.00004';
+                    }
+
+                    let codeUrl = '';
+                    if (title.includes('Capturing User Interests from Data Streams')) {
+                      codeUrl = 'https://arxiv.org/abs/2506.07466';
+                    } else if (title.includes('Collaborative Diffusion Model')) {
+                      codeUrl = 'https://github.com/Gyu-Seok0/CDiff4Rec_WWW25';
+                    } else if (title.includes('Continual Collaborative Distillation')) {
+                      codeUrl = 'https://github.com/Gyu-Seok0/CCD_KDD24';
+                    } else if (title.includes('Calibrating Deep Learning Model')) {
+                      codeUrl = 'https://arxiv.org/abs/2501.00004';
+                    }
+                    
+                    // Map titles to image files
+                    let imagePath = '';
+                    if (title.includes('Capturing User Interests from Data Streams')) {
+                      imagePath = '/assets/img/papers/CSTRec.png';
+                    } else if (title.includes('Collaborative Diffusion Model')) {
+                      imagePath = '/assets/img/papers/CDiff4Rec.png';
+                    } else if (title.includes('Continual Collaborative Distillation')) {
+                      imagePath = '/assets/img/papers/CCD.png';
+                    } else if (title.includes('Calibrating Deep Learning Model')) {
+                      imagePath = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5LSUMgUGFwZXI8L3RleHQ+Cjwvc3ZnPgo=';
+                    }
+
+                    
+
+                    // Add link to title with buttons
+                    <!-- if (paperUrl) {
+                      const titleText = titleElement.textContent;
+                      titleElement.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                          <span style="flex: 1;">${titleText}</span>
+                          <div style="display: flex; gap: 5px;">
+                            <a href="${paperUrl}" target="_blank" style="background: #007bff; color: white; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: all 0.3s ease;">PAPER</a>
+                          </div>
+                        </div>
+                      `;
+                      console.log('Added buttons to title:', paperUrl);
+                    }
+
+                                     // Add link to title with buttons
+                    if (codeUrl) {
+                      const titleText = titleElement.textContent;
+                      titleElement.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                          <span style="flex: 1;">${titleText}</span>
+                          <div style="display: flex; gap: 5px;">
+                            <a href="${codeUrl}" style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: all 0.3s ease;">CODE</a>
+                          </div>
+                        </div>
+                      `;
+                      console.log('Added buttons to title:', codeUrl);
+                    } -->
+
+
+                    // Add link(s) to title with buttons
+                    const titleText = titleElement.textContent;
+                    let buttonsHTML = '';
+
+                    if (paperUrl) {
+                      buttonsHTML += `
+                        <a href="${paperUrl}" target="_blank"
+                          style="background: #007bff; color: white; padding: 4px 8px;
+                                border-radius: 4px; text-decoration: none;
+                                font-size: 0.8em; font-weight: bold;
+                                transition: all 0.3s ease;">PAPER</a>
+                      `;
+                    }
+
+                    if (codeUrl) {
+                      buttonsHTML += `
+                        <a href="${codeUrl}" target="_blank"
+                          style="background: #28a745; color: white; padding: 4px 8px;
+                                border-radius: 4px; text-decoration: none;
+                                font-size: 0.8em; font-weight: bold;
+                                transition: all 0.3s ease;">CODE</a>
+                      `;
+                    }
+
+                    if (buttonsHTML) {
+                      titleElement.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                          <span style="flex: 1;">${titleText}</span>
+                          <div style="display: flex; gap: 5px;">
+                            ${buttonsHTML}
+                          </div>
+                        </div>
+                      `;
+                      console.log('Added buttons:', { paperUrl, codeUrl });
+                    }
+
+                    // Add image
+                    if (imagePath) {
+                      console.log('Adding image:', imagePath);
+                      const img = document.createElement('img');
+                      img.src = imagePath;
+                      img.alt = 'Paper preview';
+                      img.style.cssText = 'max-width: 100%; height: auto; margin: 10px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);';
+                      img.className = 'paper-image';
+                      
+                      // Add image after conference abbreviation
+                      abbrElement.parentNode.insertBefore(img, abbrElement.nextSibling);
+                    }
+                  }
+                }
+              });
+
+              console.log('Publication processing completed');
+            });
+          </script>

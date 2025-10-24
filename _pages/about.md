@@ -27,7 +27,7 @@ My goal is to pursue research with real-world impact.
 
 My research interests include Information Retrieval and Recommender Systems, with a focus on using LLMs to support decision-making.
 
-For your reference, I attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
+For your reference, I have attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
 
 
 
