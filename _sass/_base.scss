@@ -885,7 +885,7 @@ footer.sticky-bottom {
 
   // Selected publications layout
   &.publications-selected {
-    margin-top: 0rem;
+    margin-top: 3rem;
 
     ol {
       display: flex;
@@ -903,6 +903,10 @@ footer.sticky-bottom {
         .abbr {
           width: 6rem;
           flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
 
           span {
             display: inline-block;
@@ -917,12 +921,15 @@ footer.sticky-bottom {
           }
 
           .bib-preview {
+            width: 100%;
             margin-top: 0.75rem;
 
             img {
               width: 100%;
+              height: auto;
               border-radius: 0.5rem;
               box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+              object-fit: cover;
             }
           }
         }
