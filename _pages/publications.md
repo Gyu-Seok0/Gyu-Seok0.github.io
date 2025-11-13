@@ -25,7 +25,7 @@ nav_order: 1
 
 <ul>
   <li>
-    <strong>Gyuseok Lee</strong>, Yaochen Zhu, Hwanjo Yu, Yao Zhou, and Li Jundong??.<br>
+    <strong>Gyuseok Lee</strong>, Yaochen Zhu, Hwanjo Yu, Yao Zhou, and Li Jundong.<br>
     <a href="https://example.com">Collaborative Diffusion Model for Recommender System</a>.
   </li>
   <li>

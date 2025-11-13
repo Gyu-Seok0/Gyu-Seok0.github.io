@@ -882,6 +882,123 @@ footer.sticky-bottom {
       }
     }
   }
+
+  // Selected publications layout
+  &.publications-selected {
+    margin-top: 0rem;
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .bib-entry {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .abbr {
+          width: 6rem;
+          flex-shrink: 0;
+
+          span {
+            display: inline-block;
+            background: var(--global-theme-color);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.8rem;
+          }
+
+          .bib-preview {
+            margin-top: 0.75rem;
+
+            img {
+              width: 100%;
+              border-radius: 0.5rem;
+              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            }
+          }
+        }
+
+        .bib-body {
+          flex: 1;
+
+          .bib-title-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 0.4rem;
+
+            .bib-title {
+              font-weight: 700;
+              font-size: 1.05rem;
+            }
+
+            .bib-links {
+              display: inline-flex;
+              gap: 0.4rem;
+
+              .bib-btn {
+                display: inline-block;
+                padding: 0.25rem 0.65rem;
+                border-radius: 0.35rem;
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                text-decoration: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+                &.bib-btn-paper {
+                  background: #0057ff;
+                  color: #fff;
+                }
+
+                &.bib-btn-code {
+                  background: #1ea44c;
+                  color: #fff;
+                }
+
+                &:hover {
+                  transform: translateY(-1px);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+
+          .bib-authors {
+            color: var(--global-text-color);
+            line-height: 1.4;
+            margin-bottom: 0.3rem;
+
+            .me {
+              font-weight: 700;
+              text-decoration: underline;
+            }
+          }
+
+          .bib-venue {
+            font-style: italic;
+            color: var(--global-text-color-light);
+          }
+        }
+      }
+    }
+  }
+}
+
+.news + h2 {
+  margin-top: 3rem;
 }
 
 // Rouge Color Customization
