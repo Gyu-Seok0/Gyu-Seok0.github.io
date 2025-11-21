@@ -3,8 +3,19 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         {%- if site.enable_publication_thumbnails -%}
-        <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
-        {%- if entry.preview -%}
+        <div class="col-sm-3 {% if entry.preview or entry.image %}preview{% else %}abbr{% endif %}">
+        {%- if entry.image -%}
+          {% if entry.image contains '://' -%}
+          <img class="preview z-depth-1 rounded" src="{{ entry.image }}">
+          {%- else -%}
+            {%- assign entry_path = entry.image | prepend: '/' -%}
+            {% include figure.html
+            path=entry_path
+            class="preview z-depth-1 rounded"
+            zoomable=false
+            alt=entry.title -%}
+          {%- endif -%}
+        {%- elsif entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {%- else -%}
@@ -30,9 +41,21 @@
         {%- endif -%}
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
         <!-- Title -->
-        <div class="title">{{entry.title}}</div>
+        <div class="title">
+          {{entry.title}}
+          {%- if entry.url or entry.code -%}
+            <span class="title-links" style="margin-left: 10px; font-size: 0.85em;">
+              {%- if entry.url -%}
+                <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button" style="background: #007bff; color: white; padding: 2px 8px; margin-right: 5px;">Paper</a>
+              {%- endif -%}
+              {%- if entry.code -%}
+                <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button" style="background: #28a745; color: white; padding: 2px 8px;">Code</a>
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        </div>
         <!-- Author -->
         <div class="author">
         {% assign author_array_size = entry.author_array | size %}
