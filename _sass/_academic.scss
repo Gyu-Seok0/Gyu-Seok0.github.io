@@ -1,0 +1,248 @@
+/*******************************************************************************
+ * Academic Clean Theme Override
+ ******************************************************************************/
+
+// ── About Wrapper ──────────────────────────────────────────────────────────
+.about-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// ── Profile Section ────────────────────────────────────────────────────────
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  margin-bottom: 24px;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  width: 200px;
+
+  .profile-img,
+  img {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    box-shadow: none !important;
+  }
+}
+
+.profile-name {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile-subtitle {
+  color: var(--global-text-color-light);
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+
+  a {
+    color: var(--global-theme-color);
+  }
+}
+
+.profile-links {
+  font-size: 1rem;
+  line-height: 1.8;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+// ── Bio Content ────────────────────────────────────────────────────────────
+.about-content {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+// ── Section Titles ─────────────────────────────────────────────────────────
+.about-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  border-bottom: 2px solid var(--global-divider-color);
+  padding-bottom: 8px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+// ── About Lists (Education, Experience) ────────────────────────────────────
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.7rem;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .about-list-detail {
+    color: var(--global-text-color-light);
+    font-size: 1rem;
+  }
+}
+
+// ── News Table ─────────────────────────────────────────────────────────────
+.about-wrapper .news {
+  .table {
+    font-size: 1.1rem !important;
+
+    th, td {
+      color: #000 !important;
+      font-size: 1.1rem !important;
+    }
+
+    th {
+      font-weight: 700;
+      white-space: nowrap;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+// ── Publications ───────────────────────────────────────────────────────────
+.about-wrapper .publications.publications-selected {
+  margin-top: 0;
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pub-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.pub-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.pub-authors {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 4px;
+  color: var(--global-text-color);
+
+  .me {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.pub-venue-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.pub-venue-badge {
+  display: inline-block;
+  background: var(--global-theme-color);
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pub-link {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
+}
+
+// ── Responsive ─────────────────────────────────────────────────────────────
+@media (max-width: 600px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 160px;
+
+    .profile-img,
+    img {
+      width: 160px !important;
+      height: 160px !important;
+    }
+  }
+
+  .profile-links {
+    text-align: center;
+  }
+}
+
+// ── Override al-folio defaults ─────────────────────────────────────────────
+.about-wrapper .profile {
+  width: auto;
+  float: none !important;
+  margin: 0;
+}
+
+.about-wrapper .post-header,
+.about-wrapper .post-title {
+  display: none;
+}

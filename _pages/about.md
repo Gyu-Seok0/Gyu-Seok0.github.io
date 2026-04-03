@@ -2,37 +2,20 @@
 layout: about
 title: about
 permalink: /
-subtitle: I am a Ph.D. student at the School of Information Sciences, University of Illinois Urbana-Champaign (UIUC), advised by <a href='https://www.wangdong.org/sslab/'> Prof. Dong Wang</a>.
-
-#<a href='https://sites.google.com/view/postechdi/home'>Pohang University of Science and Technology (POSTECH)</a> <br> 77, #Cheongam-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, the Republic of Korea #. Contacts. Moto. Etc.
+subtitle: Ph.D. Student, <a href='https://ischool.illinois.edu/'>School of Information Sciences</a>, University of Illinois Urbana-Champaign
 
 profile:
-  align: right
+  align: left
   image: passport.JPG
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
+  image_circular: true
+  more_info: >
+    <p>Email: gyuseok2 [at] illinois.edu</p>
+    <p><a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a> | <a href="https://github.com/Gyu-Seok0">GitHub</a></p>
 
-news: true  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+news: true
+latest_posts: false
+selected_papers: true
+social: false
 ---
-<!-- Hello! I am an AI Research Scientist at POSTECH under the guidance of Prof. <a href="https://sites.google.com/view/postechdi/member/faculty">Hwanjo Yu</a>.  -->
 
-
-My goal is to pursue research with real-world impact.
-
-My research interests include Information Retrieval and Recommender Systems, with a focus on using LLMs to support decision-making.
-
-For your reference, I have attached my <a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a>.
-
-
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+I am a Ph.D. student at the [School of Information Sciences](https://ischool.illinois.edu/), University of Illinois Urbana-Champaign (UIUC). My research interests lie in **Data Mining**, **Information Retrieval**, **Recommender Systems**, and **LLM&nbsp;Personalization**, with a focus on building systems that support better human decision-making. I am always open to collaboration — feel free to reach out!

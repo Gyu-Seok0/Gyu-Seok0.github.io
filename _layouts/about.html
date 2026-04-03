@@ -2,78 +2,106 @@
 layout: default
 ---
 
-<!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+<div class="about-wrapper">
 
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+  <!-- Profile Section: photo left, bio right -->
+  {% if page.profile -%}
+  <div class="profile-section">
+    <div class="profile-photo">
+      {%- if page.profile.image %}
+        {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+        {% include figure.html
+          path=profile_image_path
+          class="img-fluid profile-img"
+          alt=page.profile.image
+          cache_bust=true -%}
+      {% endif -%}
+    </div>
+    <div class="profile-bio">
+      <h1 class="profile-name">
+        {% if site.title == "blank" -%}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
+        {%- else -%}
+          {{ site.title }}
+        {%- endif %}
+      </h1>
+      <p class="profile-subtitle">{{ page.subtitle }}</p>
+      {%- if page.profile.more_info %}
+      <div class="profile-links">
+        {{ page.profile.more_info }}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+  {%- endif %}
 
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
+  <!-- Bio content from about.md -->
+  <div class="about-content">
+    {{ content }}
+  </div>
 
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image
-              cache_bust=true -%}
-            {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
-            </div>
-            {%- endif %}
-          </div>
-          {%- endif %}
+  <!-- Education -->
+  <h2 class="about-section-title">Education</h2>
+  <ul class="about-list">
+    <li>
+      <strong>Ph.D.</strong> in Information Sciences, <a href="https://ischool.illinois.edu/">University of Illinois Urbana-Champaign (UIUC)</a>, Aug 2025 &ndash; Present
+      <br><span class="about-list-detail">Advisor: <a href="https://www.wangdong.org/sslab/">Prof. Dong Wang</a></span>
+    </li>
+    <li>
+      <strong>M.S.</strong> in Artificial Intelligence, <a href="https://www.postech.ac.kr/">Pohang University of Science and Technology (POSTECH)</a>, Feb 2022 &ndash; Feb 2024
+      <br><span class="about-list-detail">Advisor: <a href="https://sites.google.com/view/postechdi/member/faculty">Prof. Hwanjo Yu</a></span>
+    </li>
+    <li>
+      <strong>B.S.</strong> in Computer Science, Mathematics &amp; Statistics, <a href="https://www.handong.edu/">Handong Global University (HGU)</a>, Mar 2015 &ndash; Feb 2022
+      <br><span class="about-list-detail"><em>Magna Cum Laude</em></span>
+    </li>
+  </ul>
 
-          <div class="clearfix">
-            {{ content }}
-          </div>
+  <!-- Research Experience -->
+  <h2 class="about-section-title">Research Experience</h2>
+  <ul class="about-list">
+    <li>
+      <strong>Visiting Researcher</strong>, <a href="https://www.korea.ac.kr/">Korea University</a>, Apr 2025 &ndash; Aug 2025
+      <br><span class="about-list-detail">Hosted by <a href="https://seongku-kang.github.io/">Prof. SeongKu Kang</a></span>
+    </li>
+    <li>
+      <strong>Visiting Researcher</strong>, <a href="https://www.virginia.edu/">University of Virginia</a>, Sep 2023 &ndash; Feb 2024
+      <br><span class="about-list-detail">Hosted by <a href="https://jundongli.github.io/">Prof. Jundong Li</a></span>
+    </li>
+    <li>
+      <strong>Visiting Researcher</strong>, <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, Aug 2022 &ndash; Feb 2023
+      <br><span class="about-list-detail">IITP AI Intensive Program</span>
+    </li>
+  </ul>
 
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <!-- <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h2> -->
-            <h2>News</h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
+  <!-- News -->
+  {% if page.news and site.announcements.enabled -%}
+    <h2 class="about-section-title">News</h2>
+    {%- include news.html limit=true %}
+  {%- endif %}
 
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
+  <!-- Preprints -->
+  {% if page.selected_papers -%}
+    <h2 class="about-section-title">Preprints</h2>
+    {%- include preprints.html %}
+  {%- endif %}
 
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <!-- <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Publications</a></h2> -->
-            <h2>Publications</h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
+  <!-- Selected Publications -->
+  {% if page.selected_papers -%}
+    <h2 class="about-section-title">Publications</h2>
+    {%- include selected_papers.html %}
+  {%- endif %}
 
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
-            </div>
-          {%- endif %}
-        </article>
+  <!-- Social -->
+  {%- if page.social %}
+    <div class="social">
+      <div class="contact-icons">
+        {% include social.html %}
+      </div>
+      <div class="contact-note">
+        {{ site.contact_note }}
+      </div>
+    </div>
+  {%- endif %}
 
 </div>
