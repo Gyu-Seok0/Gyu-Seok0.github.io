@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student, <a href='https://ischool.illinois.edu/'>School of Information Sciences</a>, University of Illinois Urbana-Champaign
+subtitle: Ph.D. Student, University of Illinois Urbana-Champaign
 
 profile:
   align: left
@@ -18,4 +18,4 @@ selected_papers: true
 social: false
 ---
 
-I am a Ph.D. student at the [School of Information Sciences](https://ischool.illinois.edu/), University of Illinois Urbana-Champaign (UIUC). My research interests lie in **Data Mining**, **Information Retrieval**, **Recommender Systems**, and **LLM&nbsp;Personalization**, with a focus on building systems that support better human decision-making. I am always open to collaboration — feel free to reach out!
+My research interests lie in **Data Mining**, **Information Retrieval**, **Recommender Systems**, and **LLM&nbsp;Personalization**, with a focus on building systems that support better human decision-making. I am always open to collaboration — feel free to reach out!
