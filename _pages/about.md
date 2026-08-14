@@ -1,7 +1,7 @@
 ---
 layout: about
 title: about
-permalink: /
+permalink: /old-about/
 subtitle: Ph.D. Student, University of Illinois Urbana-Champaign
 
 profile:
