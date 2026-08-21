@@ -10,7 +10,7 @@ profile:
   image_circular: true
   more_info: >
     <p>Email: gyuseok2 [at] illinois.edu</p>
-    <p><a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a> | <a href="https://github.com/Gyu-Seok0">GitHub</a></p>
+    <p><a href="/assets/pdf/CV(Gyuseok_Lee).pdf">CV</a> | <a href="https://github.com/Gyu-Seok-Lee">GitHub</a></p>
 
 news: true
 latest_posts: false
